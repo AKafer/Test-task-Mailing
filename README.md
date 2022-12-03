@@ -52,11 +52,12 @@ source venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
-### Выполнить миграции:
+### Выполнить миграции и загрузить тестовые данные в БД:
 
 ```
 cd application
 python manage.py migrate
+python manage.py loaddata data.json
 ```
 
 ### Запустить API проекта:
@@ -65,7 +66,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### В новом терминале запустить программу рассылки:
+### В новом терминале запустить программу рассылки (файл находится по адресу application/mailing/management/commands/send_mes.py):
 
 ```
 python manage.py send_mes.py
