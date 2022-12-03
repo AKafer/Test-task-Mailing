@@ -69,6 +69,8 @@ python manage.py runserver
 ### В новом терминале запустить программу рассылки (файл находится по адресу application/mailing/management/commands/send_mes.py):
 
 ```
+source venv/Scripts/activate
+cd application
 python manage.py send_mes.py
 ```
 
